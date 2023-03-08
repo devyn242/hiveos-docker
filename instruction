@@ -1,0 +1,11 @@
+docker run -it \
+  --restart unless-stopped \
+  --name hiveos \
+  -v $(pwd)/hiveos-rig:/hiveos-rig \
+  --privileged \
+  --device /dev/kvm \
+  --device /dev/vfio/vfio \
+  --device /dev/vfio/1 \
+  -v /lib/modules:/lib/modules:ro \
+  --ulimit memlock=-1:-1 \
+  ghcr.io/lg/hiveos-docker
