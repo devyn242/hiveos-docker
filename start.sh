@@ -3,8 +3,7 @@
 if ! test -f /hiveos-rig/hiveos.qcow2; then
   echo "The file /hiveos-rig/hiveos.qcow2 doesnt exist (or isnt volume linked), going to create it now."
   if ! test -f /hiveos-rig/rig.conf; then
-    echo "Missing /hiveos-rig/rig.conf file. Aborting."
-    exit 1
+    echo "Missing /hiveos-rig/rig.conf file. be aware."
   fi
 
   cd /hiveos-rig
